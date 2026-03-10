@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Tes couleurs custom — syntaxe v4 (plus de tailwind.config.js !) */
+@theme {
+  --color-bg:      #080808;
+  --color-surface: #101010;
+  --color-border:  #1e1e1e;
+  --color-accent:  #c8f135;
+  --color-accent2: #3df5c1;
+  --color-muted:   #555555;
+  --color-light:   #f0f0ec;
+
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --animate-slideUp:    slideUp 0.9s cubic-bezier(0.16,1,0.3,1) both;
+  --animate-slideUp-d1: slideUp 0.9s 0.1s cubic-bezier(0.16,1,0.3,1) both;
+  --animate-slideUp-d2: slideUp 0.9s 0.2s cubic-bezier(0.16,1,0.3,1) both;
+  --animate-fadeIn:     fadeIn 1s 0.5s both;
+  --animate-scrollPulse: scrollPulse 2s ease-in-out infinite;
+
+  @keyframes slideUp {
+    0%   { transform: translateY(110%); opacity: 0; }
+    100% { transform: translateY(0);    opacity: 1; }
+  }
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1);   opacity: 1; }
+    50%       { transform: scaleY(0.4); opacity: 0.4; }
+  }
+  --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+/* ── THÈME CLAIR ─────────────────────────────────────
+   Quand la classe .light est sur <html>,
+   on redéfinit les variables CSS pour écraser le dark mode.
+*/
+.light {
+  --color-bg:      #f5f5f0;
+  --color-surface: #ebebeb;
+  --color-border:  #d0d0d0;
+  --color-muted:   #888888;
+  --color-light:   #111111;
+  /* accent reste le même dans les deux modes */
+}
+
+/* Applique la transition sur tous les éléments */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Styles globaux (pseudo-éléments, etc.) */
+body { cursor: none; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(200,241,53,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,241,53,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
+}
+
+.hero-badge::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: #c8f135;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1; max-width: 80px;
+  height: 1px;
+  background: #c8f135;
+  opacity: 0.5;
+}
+
+.title-line { overflow: hidden; }
+
+.skill-fill {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.skill-fill.animate { transform: scaleX(1); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+.project-arrow { transition: transform 0.3s, color 0.3s; }
+.project-card:hover .project-arrow { transform: translate(4px, -4px); color: #c8f135; }
+
+.form-input::placeholder { color: #555; font-family: 'DM Mono', monospace; font-size: 0.78rem; }
+
