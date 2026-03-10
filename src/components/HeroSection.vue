@@ -7,18 +7,15 @@
     </div>
 
     <!-- title-line a overflow:hidden → le span monte depuis le bas (slideUp) -->
-    
       <h1 class="relative z-10 text-[clamp(3.5rem,9vw,9rem)] font-extrabold leading-[0.9] tracking-[-0.04em] mb-8">
       <span class="title-line block"><span class="block animate-slideUp">Créer des</span></span>
       <span class="title-line block"><span class="block animate-slideUp-d1 text-accent italic">expériences</span></span>
       <span class="title-line block"><span class="block animate-slideUp-d2">mémorables.</span></span>
     </h1>
-    
-  
 
     <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8 mt-4 animate-fadeIn">
       <img src="/Me.jpeg" alt="ma photo" class="w-50 h-50 rounded-full object-cover border-2 border-accent transform hover:scale-110 transition duration-500">
-      <p class="font-mono text-sm text-muted leading-relaxed max-w-xs">
+      <p class="font-display text-sm text-muted leading-relaxed max-w-xs">
         <b>Salut! 😊</b>
         Je suis Kevin Ebénior ADJALALA , Developpeur web fullstack passionné par la creation de solutions numeriques modernes et performantes. 
         Outre mon expertise en developpement web, je maitrise Wordpress et je conçois des applications web completes, de l'interface utilisateurs (Frontend)
@@ -34,12 +31,12 @@
           <span class="block text-4xl font-extrabold font-display text-light">{{ projectCount }}+</span>
           projets livrés
         </div>
-        <div class="font-mono text-[0.72rem] text-muted">
+        <div class="font-display text-[0.72rem] text-muted">
           <span class="block text-4xl font-extrabold font-display text-light">{{ expYears }}</span>
           ans d'expérience
         </div>
       </div>
-      <div class="flex flex-col items-center gap-2 font-mono text-[0.65rem] text-muted tracking-[0.1em]">
+      <div class="flex flex-col items-center gap-2 font-display text-[0.65rem] text-muted tracking-[0.1em]">
         <div class="w-px h-16 bg-linear-to-b from-accent to-transparent animate-scrollPulse"></div>
         SCROLL
       </div>

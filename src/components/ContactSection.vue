@@ -7,14 +7,14 @@
         <div class="text-[clamp(2rem,4vw,3.2rem)] font-extrabold tracking-[-0.03em] leading-[1.1] mb-6">
           Travaillons<br>ensemble <span class="text-accent">→</span>
         </div>
-        <p class="font-mono text-[0.8rem] text-muted leading-[1.8] max-w-xs">Disponible pour des missions freelance ou des opportunités full-time.</p>
+        <p class="font-display text-[0.8rem] text-muted leading-[1.8] max-w-xs">Disponible pour des missions freelance ou des opportunités full-time.</p>
         <div class="flex flex-col mt-8">
         <a v-for="link in socialLinks"
           :key="link.label"
           :href="link.href"
           :target="link.href.startsWith('mailto') ? '_self' : '_blank'"
           rel="noopener noreferrer"
-          class="flex items-center gap-4 font-mono text-[0.8rem] text-muted py-3 border-b border-border hover:text-accent hover:pl-2 transition-all duration-200"
+          class="flex items-center gap-4 font-display text-[0.8rem] text-muted py-3 border-b border-border hover:text-accent hover:pl-2 transition-all duration-200"
         >
           ↗ {{ link.label }}
         </a>

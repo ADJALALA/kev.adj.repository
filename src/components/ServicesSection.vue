@@ -24,7 +24,7 @@
           Numéro du service
           String.padStart(2, '0') → transforme 1 en "01", 2 en "02", etc.
         -->
-        <div class="font-mono text-[0.65rem] text-muted mb-6">
+        <div class="font-display text-[0.65rem] text-muted mb-6">
           {{ String(i + 1).padStart(2, '0') }}
         </div>
 
@@ -35,12 +35,12 @@
         <h3 class="text-lg font-bold tracking-[-0.02em] mb-3">{{ service.name }}</h3>
 
         <!-- Description -->
-        <p class="font-mono text-[0.78rem] text-muted leading-relaxed mb-6">{{ service.desc }}</p>
+        <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-6">{{ service.desc }}</p>
 
         <!-- Technologies associées -->
         <div class="flex flex-wrap gap-2">
           <span v-for="tech in service.techs" :key="tech"
-            class="font-mono text-[0.6rem] px-2 py-0.5 border border-border text-muted">
+            class="font-display text-[0.6rem] px-2 py-0.5 border border-border text-muted">
             {{ tech }}
           </span>
         </div>
