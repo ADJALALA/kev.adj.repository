@@ -33,7 +33,7 @@
         <div class="font-display text-[0.65rem] text-muted mb-8">— 00{{ i + 2 }}</div>
         <div class="inline-block font-display text-[0.65rem] border border-border text-muted px-2 py-0.5 mb-5">{{ p.type }}</div>
         <div class="text-xl font-bold tracking-[-0.02em] mb-3">{{ p.name }}</div>
-        <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-8">{{ p.desc }}</p>
+        <p class="font-display text-[0.78rem] text-gray-400 leading-relaxed mb-8">{{ p.desc }}</p>
         <div class="flex justify-between items-center">
           <div class="flex gap-2 flex-wrap">
             <span v-for="t in p.stack" :key="t"

@@ -7,7 +7,7 @@
       <!-- Colonne sticky : reste visible pendant le scroll -->
       <div class="reveal md:sticky md:top-32">
         <h2 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold tracking-[-0.03em] leading-none">Stack &<br>maîtrise.</h2>
-        <p class="font-mono text-[0.82rem] text-muted leading-[1.8] mt-6">Des fondamentaux solides combinés à une curiosité constante.</p>
+        <p class="font-mono text-[0.82rem] text-gray-400 leading-[1.8] mt-6">Des fondamentaux solides combinés à une curiosité constante.</p>
       </div>
 
       <div class="flex flex-col gap-12">
@@ -17,7 +17,7 @@
             <div class="flex flex-col gap-1.5" v-for="s in group.skills" :key="s.name">
               <div class="flex justify-between items-center">
                 <span class="text-sm font-semibold">{{ s.name }}</span>
-                <span class="font-mono text-[0.7rem] text-muted">{{ s.pct }}%</span>
+                <span class="font-mono text-[0.7rem] text-gray-400">{{ s.pct }}%</span>
               </div>
               <div class="h-px bg-border relative overflow-hidden">
                 <!--

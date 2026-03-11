@@ -14,7 +14,7 @@
       <a v-for="link in links" :key="link.href" :href="link.href"
         @click="menuOpen = false"
         class="font-display
-         text-xs text-muted hover:text-accent transition-colors tracking-widest">
+         text-xs text-light hover:text-accent transition-colors tracking-widest">
         {{ link.label }}
       </a>
     </div>
@@ -97,7 +97,7 @@
           :key="link.href"
           :href="link.href"
           @click="menuOpen = false"
-          class="font-mono text-sm text-muted hover:text-accent py-4 border-b border-border last:border-0 transition-colors tracking-widest"
+          class="font-mono text-sm text-light hover:text-accent py-4 border-b border-border last:border-0 transition-colors tracking-widest"
         >
           <!-- Numéro décoratif + label -->
           <span class="text-accent mr-3">0{{ link.index }}.</span>

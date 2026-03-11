@@ -15,7 +15,7 @@
 
     <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8 mt-4 animate-fadeIn">
       <img src="/Me.jpeg" alt="ma photo" class="w-50 h-50 rounded-full object-cover border-2 border-accent transform hover:scale-110 transition duration-500">
-      <p class="font-display text-sm text-muted leading-relaxed max-w-xs">
+      <p class="font-display text-sm text-gray-400 leading-relaxed max-w-xs">
         <b>Salut! 😊</b>
         Je suis Kevin Ebénior ADJALALA , Developpeur web fullstack passionné par la creation de solutions numeriques modernes et performantes. 
         Outre mon expertise en developpement web, je maitrise Wordpress et je conçois des applications web completes, de l'interface utilisateurs (Frontend)

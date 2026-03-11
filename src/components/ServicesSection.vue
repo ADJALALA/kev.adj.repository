@@ -35,7 +35,7 @@
         <h3 class="text-lg font-bold tracking-[-0.02em] mb-3">{{ service.name }}</h3>
 
         <!-- Description -->
-        <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-6">{{ service.desc }}</p>
+        <p class="font-display text-[0.78rem] text-gray-400 leading-relaxed mb-6">{{ service.desc }}</p>
 
         <!-- Technologies associées -->
         <div class="flex flex-wrap gap-2">

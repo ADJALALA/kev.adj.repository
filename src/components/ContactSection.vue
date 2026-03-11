@@ -7,14 +7,14 @@
         <div class="text-[clamp(2rem,4vw,3.2rem)] font-extrabold tracking-[-0.03em] leading-[1.1] mb-6">
           Travaillons<br>ensemble <span class="text-accent">→</span>
         </div>
-        <p class="font-display text-[0.8rem] text-muted leading-[1.8] max-w-xs">Disponible pour des missions freelance ou des opportunités full-time.</p>
+        <p class="font-display text-[0.8rem] text-gray-400 leading-[1.8] max-w-xs">Disponible pour des missions freelance ou des opportunités full-time.</p>
         <div class="flex flex-col mt-8">
         <a v-for="link in socialLinks"
           :key="link.label"
           :href="link.href"
           :target="link.href.startsWith('mailto') ? '_self' : '_blank'"
           rel="noopener noreferrer"
-          class="flex items-center gap-4 font-display text-[0.8rem] text-muted py-3 border-b border-border hover:text-accent hover:pl-2 transition-all duration-200"
+          class="flex items-center gap-4 font-display text-[0.8rem] text-gray-400 py-3 border-b border-border hover:text-accent hover:pl-2 transition-all duration-200"
         >
           ↗ {{ link.label }}
         </a>
@@ -24,7 +24,7 @@
 
       <div class="flex flex-col gap-6 reveal">
         <div class="flex flex-col gap-2" v-for="field in fields" :key="field.model">
-          <label class="font-mono text-[0.65rem] tracking-[0.1em] text-muted">{{ field.label }}</label>
+          <label class="font-mono text-[0.65rem] tracking-[0.1em] text-light">{{ field.label }}</label>
           <!-- v-if/v-else → textarea ou input selon le type du champ -->
           <textarea v-if="field.type === 'textarea'" v-model="form[field.model]"
             :placeholder="field.placeholder" rows="4"
@@ -69,6 +69,7 @@ const socialLinks = [
   { label: 'GitHub',                href: 'https://github.com/ADJALALA' },
   { label: 'LinkedIn',              href: 'https://linkedin.com/in/Kevin Ebenior ADJALALA' },
   { label: 'hello@monportfolio.dev', href: 'mailto:ebenioradjalala@gmail.com' },
+  { label: 'Whatsapp',              href: 'https://wa.me/2290190187561' },
 ]
 
 // function sendMsg() {
