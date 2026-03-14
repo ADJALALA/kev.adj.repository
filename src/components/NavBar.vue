@@ -104,13 +104,6 @@
           <span class="text-accent mr-3">0{{ link.index }}.</span>
           {{ link.label }}
         </a>
-        <a
-          href="/cv.pdf"
-          download="CV-Kevin.pdf"
-          class="hidden md:inline-flex items-center gap-2 border border-accent text-accent font-mono text-xs px-4 py-2 hover:bg-accent hover:text-bg transition-all duration-200"
-        >
-          ↓ CV
-        </a>
       </div>
     </div>
   </Transition>

@@ -7,31 +7,32 @@
 
       <!-- Carte featured : md:col-span-2 = occupe les 2 colonnes -->
       <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
-        <div>
-          <div class="font-display text-[0.65rem] text-muted mb-8">— 001</div>
-          <div class="inline-block font-display text-[0.65rem] border border-border text-muted px-2 py-0.5 mb-5">APPLICATION WEB</div>
-          <div class="text-2xl font-bold tracking-[-0.02em] mb-3">{{ projects[0].name }}</div>
-          <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-8">{{ projects[0].desc }}</p>
-          <div class="flex justify-between items-center">
-            <div class="flex gap-2 flex-wrap">
-              <!-- v-for → boucle sur le tableau stack -->
+        <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
+  
+          <!-- Colonne gauche : texte + boutons uniquement -->
+          <div>
+            <div class="font-display text-[0.65rem] text-muted mb-8">— 001</div>
+            <div class="inline-block font-display text-[0.65rem] border border-border text-muted px-2 py-0.5 mb-5">APPLICATION WEB</div>
+            <div class="text-2xl font-bold tracking-[-0.02em] mb-3">{{ projects[0].name }}</div>
+            <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-8">{{ projects[0].desc }}</p>
+            <div class="flex gap-2 flex-wrap mb-6">
               <span v-for="t in projects[0].stack" :key="t"
                 class="font-display text-[0.6rem] px-2 py-0.5 bg-surface text-muted rounded-[2px]">{{ t }}</span>
             </div>
-            <!-- LIENS démo + github -->
-            <div class="flex gap-4">
+            <!-- ✅ projects[0].demo et projects[0].github -->
+            <div class="flex flex-wrap gap-2">
               <a v-if="projects[0].demo" :href="projects[0].demo" target="_blank"
-                class="inline-flex items-center gap-2 bg-accent text-bg font-bold font-mono text-xs px-4 py-2 hover:opacity-80 transition-opacity">
-                ↗ Voir la démo
+                class="inline-flex items-center gap-1 bg-accent text-bg font-bold font-mono text-[0.65rem] px-3 py-1.5 hover:opacity-80 transition-opacity">
+                ↗ Démo
               </a>
               <a v-if="projects[0].github" :href="projects[0].github" target="_blank"
-                class="inline-flex items-center gap-2 border border-border text-muted font-mono text-xs px-4 py-2 hover:border-accent hover:text-accent transition-all">
+                class="inline-flex items-center gap-1 border border-border text-muted font-mono text-[0.65rem] px-3 py-1.5 hover:border-accent hover:text-accent transition-all">
                 ⌥ GitHub
               </a>
             </div>
-            <span class="project-arrow text-xl text-muted">↗</span>
           </div>
-          <!-- IMAGE du projet -->
+
+          <!-- Colonne droite : image ou canvas -->
           <div class="aspect-video bg-surface border border-border overflow-hidden">
             <img
               v-if="projects[0].image"
@@ -39,12 +40,12 @@
               :alt="projects[0].name"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <!-- Canvas si pas d'image -->
             <canvas v-else ref="canvasRef" class="w-full h-full" width="480" height="270"></canvas>
           </div>
+
         </div>
         <!-- ref="canvasRef" → template ref : Vue remplit cette variable avec l'élément DOM -->
-        <div class="aspect-video bg-surface border border-border overflow-hidden">
+        <div class="hidden md:block aspect-video bg-surface border border-border overflow-hidden">
           <canvas ref="canvasRef" class="w-full h-full" width="480" height="270"></canvas>
         </div>
       </div>
@@ -68,13 +69,13 @@
         </div>
 
         <!-- Liens démo + github -->
-        <div class="flex gap-3">
+        <div class="flex flex-wrap gap-2 mt-4">
           <a v-if="p.demo" :href="p.demo" target="_blank"
-            class="inline-flex items-center gap-2 bg-accent text-bg font-bold font-mono text-xs px-4 py-2 hover:opacity-80 transition-opacity">
+            class="inline-flex items-center gap-1 bg-accent text-bg font-bold font-mono text-[0.65rem] px-3 py-1.5 hover:opacity-80 transition-opacity">
             ↗ Démo
           </a>
           <a v-if="p.github" :href="p.github" target="_blank"
-            class="inline-flex items-center gap-2 border border-border text-muted font-mono text-xs px-4 py-2 hover:border-accent hover:text-accent transition-all">
+            class="inline-flex items-center gap-1 border border-border text-muted font-mono text-[0.65rem] px-3 py-1.5 hover:border-accent hover:text-accent transition-all">
             ⌥ GitHub
           </a>
         </div>
@@ -98,7 +99,7 @@ const canvasRef = ref(null) // template ref → pointe vers le <canvas> dans le 
 // ])
 const projects = ref([
   {
-    name: 'Systeme de gestion de dépot de vente(TRI-HORIZONS SARL)',
+    name: 'THS',
     desc: 'Application de gestion interne et suivis des stocks, des ventes, des utilisateurs avec differents niveaux d acces pour un mini-depot SOBEBRA.',
     stack: ['Laravel', 'Node.js', 'Mysql',],
     type: 'APPLICATION WEB',
@@ -111,7 +112,7 @@ const projects = ref([
     desc: 'Plateforme e-commerce fullstack avec panier, paiement Stripe et dashboard admin.',
     stack: ['Nuxt.js', 'Stripe', 'MongoDB'],
     type: 'E-COMMERCE',
-    image: '/projects/shopwave.png',
+    image: '/projects/ths.jpe',
     demo: 'https://ton-demo.vercel.app',
     github: 'https://github.com/toi/shopwave',
   },
