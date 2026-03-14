@@ -16,7 +16,13 @@
           rel="noopener noreferrer"
           class="flex items-center gap-4 font-display text-[0.8rem] text-gray-400 py-3 border-b border-border hover:text-accent hover:pl-2 transition-all duration-200"
         >
-          ↗ {{ link.label }}
+        <span class="text-accent w-5 h-5">
+          <img v-if="link.icon === 'github'" src="\public\github.png" alt="github" class="border border-accent2">
+          <img v-if="link.icon === 'linkedin'" src="\public\linkedin.png" alt="linkedin" class="border border-accent2">
+          <img v-if="link.icon === 'email'" src="\public\email.png" alt="email" class="bg-gray-100 rounded-full ">
+          <img v-if="link.icon === 'whatsapp'" src="/public/whatsapp.png" alt="whatsapp" class="bg-green-500 rounded-full border-amber-50">
+        </span>
+          {{ link.label }}
         </a>
           
         </div>
@@ -66,10 +72,10 @@ const fields = [
   { label: 'PROJET', model: 'message', type: 'textarea', placeholder: 'Décrivez votre projet...' },
 ]
 const socialLinks = [
-  { label: 'GitHub',                href: 'https://github.com/ADJALALA' },
-  { label: 'LinkedIn',              href: 'https://linkedin.com/in/Kevin Ebenior ADJALALA' },
-  { label: 'hello@monportfolio.dev', href: 'mailto:ebenioradjalala@gmail.com' },
-  { label: 'Whatsapp',              href: 'https://wa.me/2290190187561' },
+  { label: 'GitHub',                href: 'https://github.com/ADJALALA', icon: "github" },
+  { label: 'LinkedIn',              href: 'https://linkedin.com/in/Kevin Ebenior ADJALALA', icon: "linkedin" },
+  { label: 'hello@monportfolio.dev', href: 'mailto:ebenioradjalala@gmail.com', icon: "email" },
+  { label: 'Whatsapp',              href: 'https://wa.me/2290190187561', icon: "whatsapp" },
 ]
 
 // function sendMsg() {

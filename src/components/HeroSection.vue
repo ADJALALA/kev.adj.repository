@@ -24,6 +24,23 @@
         <b>Mon objectif ?</b>
         <b>Creer des expériences web intuitives et impactantes</b>
       </p>
+      <div class="flex flex-wrap gap-4 mt-4">
+        <!-- BOUTON CV sous la description -->
+      <a
+        href="/cv.pdf"
+        download="CV-MonNom.pdf"
+        class="inline-flex items-center gap-3 bg-accent text-bg font-bold font-display text-sm px-6 py-3 mt-4 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#3df5c1] transition-all duration-200 self-start"
+      >
+        ↓ Télécharger mon CV
+      </a>
+      <a
+        href="#contact"
+        download="CV-MonNom.pdf"
+        class="inline-flex items-center gap-3 bg-accent text-bg font-bold font-display text-sm px-6 py-3 mt-4 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#3df5c1] transition-all duration-200 self-start"
+      >
+      ✉ Me contacter
+      </a>
+      </div>
       
       <div class="flex gap-16 items-end">
         <div class="font-mono text-[0.72rem] text-muted">

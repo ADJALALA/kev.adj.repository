@@ -21,12 +21,14 @@
 
     <!-- BOUTONS DROITE : toggle thème + hamburger -->
     <div class="flex items-center gap-4">
-
-      <!--
-        BOUTON DARK/LIGHT MODE
-        @click="toggleTheme" → appelle la fonction du composable
-        isDark → détermine quelle icône afficher (soleil ou lune)
-      -->
+      <a
+        href="/cv.pdf"
+        download="CV-Kevin.pdf"
+        class="hidden md:inline-flex items-center gap-2 border border-accent text-accent font-mono text-xs px-4 py-2 hover:bg-accent hover:text-bg transition-all duration-200"
+      >
+        ↓ CV
+      </a>
+     
       <button
         @click="toggleTheme"
         class="w-9 h-9 flex items-center justify-center border border-border rounded-full hover:border-accent transition-all duration-200 text-muted hover:text-accent"
@@ -36,7 +38,6 @@
           v-if/v-else → affiche soleil si dark, lune si clair
           Les icônes sont en SVG inline (pas besoin de librairie)
         -->
-
         <!-- SOLEIL → visible en mode sombre (pour passer au clair) -->
         <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"/>
@@ -102,6 +103,13 @@
           <!-- Numéro décoratif + label -->
           <span class="text-accent mr-3">0{{ link.index }}.</span>
           {{ link.label }}
+        </a>
+        <a
+          href="/cv.pdf"
+          download="CV-Kevin.pdf"
+          class="hidden md:inline-flex items-center gap-2 border border-accent text-accent font-mono text-xs px-4 py-2 hover:bg-accent hover:text-bg transition-all duration-200"
+        >
+          ↓ CV
         </a>
       </div>
     </div>
