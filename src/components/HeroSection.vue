@@ -35,9 +35,9 @@
         </a>
         <a
           href="#contact"
-          class="inline-flex items-center gap-3 bg-accent text-bg font-bold font-display text-sm px-6 py-3 mt-4 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#3df5c1] transition-all duration-200 self-start"
+          class="inline-flex items-center gap-3 bg-purple-800 text-gray-100 font-bold font-display text-sm px-6 py-3 mt-4 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#3df5c1] transition-all duration-200 self-start"
         >
-        ✉ Me contacter
+         ✉ Me contacter
         </a>
       </div>
       

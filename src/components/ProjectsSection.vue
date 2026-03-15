@@ -4,7 +4,6 @@
     <h2 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold tracking-[-0.03em] leading-none mb-16">Projets<br>sélectionnés.</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
-
       <!-- Carte featured : md:col-span-2 = occupe les 2 colonnes -->
       <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
         <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
@@ -12,15 +11,15 @@
           <!-- Colonne gauche : texte + boutons uniquement -->
           <div>
             <div class="font-display text-[0.65rem] text-muted mb-8">— 001</div>
-            <div class="inline-block font-display text-[0.65rem] border border-border text-muted px-2 py-0.5 mb-5">APPLICATION WEB</div>
+            <div class="inline-block font-display text-[0.65rem] border border-border text-gray-500 px-2 py-0.5 mb-5">APPLICATION WEB</div>
             <div class="text-2xl font-bold tracking-[-0.02em] mb-3">{{ projects[0].name }}</div>
-            <p class="font-display text-[0.78rem] text-muted leading-relaxed mb-8">{{ projects[0].desc }}</p>
+            <p class="font-display text-[0.78rem] text-gray-400 leading-relaxed mb-8">{{ projects[0].desc }}</p>
             <div class="flex gap-2 flex-wrap mb-6">
               <span v-for="t in projects[0].stack" :key="t"
                 class="font-display text-[0.6rem] px-2 py-0.5 bg-surface text-muted rounded-[2px]">{{ t }}</span>
             </div>
             <!-- ✅ projects[0].demo et projects[0].github -->
-            <div class="flex flex-wrap gap-2">
+            <div class="flex gap-2">
               <a v-if="projects[0].demo" :href="projects[0].demo" target="_blank"
                 class="inline-flex items-center gap-1 bg-accent text-bg font-bold font-mono text-[0.65rem] px-3 py-1.5 hover:opacity-80 transition-opacity">
                 ↗ Démo
@@ -31,14 +30,13 @@
               </a>
             </div>
           </div>
-
           <!-- Colonne droite : image ou canvas -->
           <div class="aspect-video bg-surface border border-border overflow-hidden">
             <img
               v-if="projects[0].image"
               :src="projects[0].image"
               :alt="projects[0].name"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-500"
             />
             <canvas v-else ref="canvasRef" class="w-full h-full" width="480" height="270"></canvas>
           </div>
@@ -60,9 +58,9 @@
         </div>
 
         <div class="font-mono text-[0.65rem] text-muted mb-4">— 00{{ i + 2 }}</div>
-        <div class="inline-block font-mono text-[0.65rem] border border-border text-muted px-2 py-0.5 mb-4">{{ p.type }}</div>
+        <div class="inline-block font-mono text-[0.65rem] border border-border text-gray-500 px-2 py-0.5 mb-4">{{ p.type }}</div>
         <div class="text-xl font-bold tracking-[-0.02em] mb-3">{{ p.name }}</div>
-        <p class="font-display text-[0.85rem] text-muted leading-relaxed mb-6">{{ p.desc }}</p>
+        <p class="font-display text-[0.85rem] text-gray-400 leading-relaxed mb-6">{{ p.desc }}</p>
         <div class="flex gap-2 flex-wrap mb-6">
           <span v-for="t in p.stack" :key="t"
             class="font-mono text-[0.6rem] px-2 py-0.5 bg-surface text-muted rounded-[2px]">{{ t }}</span>
