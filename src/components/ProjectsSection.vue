@@ -3,9 +3,9 @@
     <div class="section-label flex items-center gap-3 font-mono text-[0.7rem] text-accent tracking-[0.15em] mb-4">02 — TRAVAUX</div>
     <h2 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold tracking-[-0.03em] leading-none mb-16">Projets<br>sélectionnés.</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-border border border-border">
       <!-- Carte featured : md:col-span-2 = occupe les 2 colonnes -->
-      <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
+      <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-6 md:p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
         <div class="project-card md:col-span-2 grid md:grid-cols-2 gap-16 bg-bg p-10 reveal group hover:bg-[#0d0d0d] transition-colors cursor-pointer items-center">
   
           <!-- Colonne gauche : texte + boutons uniquement -->
@@ -31,12 +31,12 @@
             </div>
           </div>
           <!-- Colonne droite : image ou canvas -->
-          <div class="aspect-video bg-surface border border-border overflow-hidden">
+          <div class="w-full aspect-video bg-surface border border-border overflow-hidden mb-6 rounded-sm">
             <img
               v-if="projects[0].image"
               :src="projects[0].image"
               :alt="projects[0].name"
-              class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-500"
+              class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <canvas v-else ref="canvasRef" class="w-full h-full" width="480" height="270"></canvas>
           </div>

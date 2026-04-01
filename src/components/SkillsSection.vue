@@ -47,6 +47,7 @@ const skillGroups = ref([
   { label: 'FRONTEND', skills: [
     { name: 'HTML5 / CSS(Tailwind)', pct: 98 },
     { name: 'Vue.js / Nuxt', pct: 88 },
+    { name: 'React(Next.js)', pct: 55 },
     { name: 'JavaScript / TypeScript', pct: 82 },
     { name: 'Design IU / UX', pct: 70 },
   ]},

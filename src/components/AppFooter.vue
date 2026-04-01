@@ -1,8 +1,8 @@
 <template>
   <footer class="px-8 md:px-16 py-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-2">
-    <p class="font-mono text-[0.7rem] text-lg">
+    <!-- <p class="font-mono text-[0.7rem] text-lg">
       Kévin Ebénior ADJALALA <span class="text-accent">Developpeur web fullstack</span>
-    </p>
+    </p> -->
     <p class="font-mono text-[0.7rem] text-muted">
       © 2026 <span class="text-accent">Mon Portfolio</span> — Tous droits réservés
     </p>
